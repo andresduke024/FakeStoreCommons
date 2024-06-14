@@ -34,3 +34,21 @@ public struct ModalPresenterWrapper<Content: View>: View {
         }
     }
 }
+
+#Preview {
+    ModalPresenterWrapper(modals: .constant([
+        Modal(
+            type: .error,
+            title: "I'm a title",
+            description: "I'm a description",
+            actions: [
+                ModalAction(name: "I'm a button"),
+                ModalAction(name: "I'm a button 2")
+            ]
+        ),
+        Modal(
+            type: .success,
+            title: "I'm a title 2"
+        )
+    ])) {}
+}

@@ -21,12 +21,12 @@ public struct ButtonText: View {
     
     public var body: some View {
         Text(text)
-            .foregroundColor(theme?.onSecondaryColor)
+            .foregroundColor(theme?.onPrimaryColor)
             .padding(.vertical, 14)
             .padding(.horizontal, 6)
     }
 }
 
 #Preview {
-    ButtonText(text: "")
+    ButtonText(text: "I'm a button")
 }

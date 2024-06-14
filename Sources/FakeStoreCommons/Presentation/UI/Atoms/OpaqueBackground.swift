@@ -23,3 +23,9 @@ public struct OpaqueBackground: View {
             }
     }
 }
+
+#Preview {
+    OpaqueBackground {
+        // On tap code
+    }
+}

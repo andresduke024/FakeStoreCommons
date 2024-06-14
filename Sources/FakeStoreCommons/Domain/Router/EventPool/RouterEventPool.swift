@@ -9,7 +9,7 @@ import Combine
 import SwiftDependencyInjector
 
 public protocol RouterEventPool: InjectableDependency {
-    var publisher: PassthroughSubject<RouterEvent, Never> { get }
+    var publisher: AnyPublisher<RouterEvent, Never> { get }
     
     @MainActor
     func emit(_ event: RouterEvent)

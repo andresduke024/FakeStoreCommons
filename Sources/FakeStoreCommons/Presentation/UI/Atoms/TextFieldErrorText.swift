@@ -38,3 +38,7 @@ public struct TextFieldErrorText: View {
         .padding(.vertical, 2)
     }
 }
+
+#Preview {
+    TextFieldErrorText(text: "I'm an error text")
+}

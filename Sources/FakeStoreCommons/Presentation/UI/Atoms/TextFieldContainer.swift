@@ -59,3 +59,9 @@ public struct TextFieldContainer<Content: View>: View {
     }
 }
 
+#Preview {
+    TextFieldContainer(
+        contentWrapper: .constant(FieldContentWrapper.build()),
+        image: Images.Icons.person
+    ) { }
+}

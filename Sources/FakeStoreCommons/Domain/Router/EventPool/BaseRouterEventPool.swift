@@ -11,7 +11,7 @@ open class BaseRouterEventPool: RouterEventPool {
     
     private let eventPool = PassthroughSubject<RouterEvent, Never>()
     
-    public var publisher: PassthroughSubject<RouterEvent, Never> { eventPool }
+    public var publisher: AnyPublisher<RouterEvent, Never> { eventPool.eraseToAnyPublisher() }
     
     required public init() {}
     

@@ -25,3 +25,7 @@ public struct Title: View {
             .foregroundColor(theme?.onPrimaryColor)
     }
 }
+
+#Preview {
+    Title(text: "I'm a title")
+}

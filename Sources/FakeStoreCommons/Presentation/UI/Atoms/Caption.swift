@@ -25,3 +25,7 @@ public struct Caption: View {
             .foregroundColor(theme?.onPrimaryColor)
     }
 }
+
+#Preview {
+    Caption(text: "I'm a caption")
+}

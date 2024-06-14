@@ -62,3 +62,13 @@ public struct ModalView: View {
         }
     }
 }
+
+#Preview {
+    ModalView(
+        item: Modal(
+            type: .success,
+            title: "I'm a title",
+            description: "I'm a description"
+        )
+    ) {}
+}

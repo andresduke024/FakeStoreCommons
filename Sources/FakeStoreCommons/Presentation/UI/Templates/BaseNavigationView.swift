@@ -14,11 +14,15 @@ public struct BaseNavigationView<Content: View>: View {
     @EnvironmentObject
     private var router: Router
     
-    private let routerEventPool: RouterEventPool
+    private let routerEventPool: RouterEventPool?
     private let content: () -> Content
     
+    private var eventPool: AnyPublisher<RouterEvent, Never> {
+        routerEventPool?.publisher ?? Empty<RouterEvent, Never>().eraseToAnyPublisher()
+    }
+    
     public init(
-        routerEventPool: RouterEventPool,
+        routerEventPool: RouterEventPool?,
         @ViewBuilder content: @escaping () -> Content
     ) {
         self.routerEventPool = routerEventPool
@@ -28,7 +32,7 @@ public struct BaseNavigationView<Content: View>: View {
     public var body: some View {
         content()
             .toolbar(.hidden)
-            .onReceive(routerEventPool.publisher) { event in
+            .onReceive(eventPool) { event in
                 switch event {
                 case .newDestination(let destination):
                     router.push(destination)
@@ -39,4 +43,8 @@ public struct BaseNavigationView<Content: View>: View {
                 }
             }
     }
+}
+
+#Preview {
+    BaseNavigationView(routerEventPool: BaseRouterEventPool()) {}
 }

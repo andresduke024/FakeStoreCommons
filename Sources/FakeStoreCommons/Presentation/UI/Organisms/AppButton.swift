@@ -56,4 +56,9 @@ public struct AppButton: View {
     }
 }
 
-
+#Preview {
+    AppButton(
+        isLoading: .constant(false),
+        text: "I'm a button"
+    ) { }
+}

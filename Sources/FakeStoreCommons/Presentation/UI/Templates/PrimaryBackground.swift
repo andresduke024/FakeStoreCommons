@@ -27,3 +27,7 @@ public struct PrimaryBackground<Content: View>: View {
         }
     }
 }
+
+#Preview {
+    PrimaryBackground {}
+}

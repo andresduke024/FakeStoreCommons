@@ -1,0 +1,32 @@
+{
+  "configurations" : [
+    {
+      "id" : "140C179F-8603-446B-B87C-212F2F2B92F1",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "codeCoverage" : {
+      "targets" : [
+        {
+          "containerPath" : "container:",
+          "identifier" : "FakeStoreCommons",
+          "name" : "FakeStoreCommons"
+        }
+      ]
+    }
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:",
+        "identifier" : "FakeStoreCommonsTests",
+        "name" : "FakeStoreCommonsTests"
+      }
+    }
+  ],
+  "version" : 1
+}

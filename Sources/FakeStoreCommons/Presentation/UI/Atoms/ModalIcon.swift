@@ -34,3 +34,7 @@ public struct ModalIcon: View {
         }
     }
 }
+
+#Preview {
+    ModalIcon(type: .success)
+}

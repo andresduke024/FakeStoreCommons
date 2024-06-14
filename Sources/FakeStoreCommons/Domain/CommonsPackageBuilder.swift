@@ -17,6 +17,7 @@ public struct CommonsPackageBuilder: BasePackageBuilderProtocol {
         
         // Router
         injector.register(RouterEventPool.self, implementation: BaseRouterEventPool.instance)
+        injector.register(TabRouterEventPool.self, implementation: BaseTabRouterEventPool.instance)
         
         // Repositories
         injector.register(WebServiceRepositoryProtocol.self, implementation: WebServiceRepositoryImpl.instance)
